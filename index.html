@@ -13,9 +13,9 @@
         <h1 class="title">Is it a Palindrome?</h1>
         <div id="form-box">
             <form id="form-container">
-                <div><label for="text-imput">Enter in text to check for a palindrome:</label></div>
+                <div><label for="text-input">Enter in text to check for a palindrome:</label></div>
                 <div>
-                <span><input type="text" id="text-input"></span>
+                <span><input type="text" id="text-input" value=""></span>
                 <span><button id="check-btn">check</button></span>
                 </div>
             </form>
@@ -25,6 +25,22 @@
             <p>A <em>palindrome</em> is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
         </div>
     </main>
-    <script src="app.js"></script>
+    <script>
+        let inputText = document.getElementById("text-input").value;
+        const checkBtn = document.getElementById("check-btn");
+        checkBtn.addEventListener("click", isInputTextPalindrome);
+        function isInputTextPalindrome(){
+            console.log("inputText" + inputText);
+     if (inputText === null){
+        result.innerText = "null";
+    }else if (inputText === "A"){
+        result.innerText = "A is a palindrome";
+    }else{
+        alert("Please input a value" + inputText);
+       // console.log("inputText" + inputText);
+    }
+    }
+        
+    </script>
 </body>
 </html>

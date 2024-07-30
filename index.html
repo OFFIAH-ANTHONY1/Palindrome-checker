@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
             <form id="form-container">
                 <div><label for="text-input">Enter in text to check for a palindrome:</label></div>
                 <div>
-                <span><input type="text" id="text-input" value=""></span>
+                <span><input type="text" id="text-input" value="button"></span>
                 <span><button id="check-btn">check</button></span>
                 </div>
             </form>
@@ -26,21 +26,62 @@
         </div>
     </main>
     <script>
-        let inputText = document.getElementById("text-input").value;
+
         const checkBtn = document.getElementById("check-btn");
         checkBtn.addEventListener("click", isInputTextPalindrome);
-        function isInputTextPalindrome(){
+        function isInputTextPalindrome() {
+
+            var inputText = document.getElementById("text-input").value;
+            
             console.log("inputText" + inputText);
-     if (inputText === null){
-        result.innerText = "null";
-    }else if (inputText === "A"){
-        result.innerText = "A is a palindrome";
+            if (inputText === null) {
+                result.innerText = "null";
+            } else if (inputText === "A") {
+                result.innerText = "A is a palindrome";
     }else{
-        alert("Please input a value" + inputText);
+        alert("Please input a value " + inputText);
        // console.log("inputText" + inputText);
     }
     }
-        
+    
     </script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main id="main-container">
+        <img src="	https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" width="240px" height="30px"
+            alt="camp-logo" id="logo">
+        <h1 class="title">Is it a Palindrome?</h1>
+        <div id="form-box">
+            <div id="form-container">
+                <div><label for="text-input">Enter in text to check for a palindrome:</label></div>
+                <div>
+                    <span><input type="text" id="text-input" value=""></span>
+                    <span><button id="check-btn">check</button></span>
+                </div>
+            </div>
+            <div id="result"></div>
+        </div>
+        <div id="hint">
+            <p>A <em>palindrome</em> is a word or sentence that's spelled the same way both forward and backward,
+                ignoring punctuation, case, and spacing.</p>
+        </div>
+
+        <p id="demo"></p>
+    </main>
+    <script src="app.js"></script>
+</body>
+
 </html>

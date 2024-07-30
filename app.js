@@ -1,10 +1,13 @@
-const inputText = document.getElementById("text-input");
 const checkBtn = document.getElementById("check-btn");
 let result = document.getElementById("result");
+ 
+function isInputTextPalindrome(){
+    
 
-function isInputTextPalindrome(inputText){
-    if (inputText === null){
-        alert("Please input a value");
+    const inputText = document.getElementById("text-input").value;
+    
+    if (inputText === ""){
+        alert("please input a value");
     }else if (inputText === "A"){
         result.innerText = "A is a palindrome";
     }else if (inputText === "eye"){
